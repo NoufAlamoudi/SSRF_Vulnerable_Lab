@@ -14,7 +14,7 @@ function get_contents($url) {
 			$ip = dns_get_record($host, DNS_A);
 			if (count($ip) > 0) {
 				$ip = $ip[0]["ip"];
-				echo "<br>Resolved to IP: - {$ip}<br>";
+				echo "<br>Resolved to IP: - " . htmlspecialchars($ip) . "<br>";
 				
 			} else {
 				die("<br>Your host couldn't be resolved man...</h3></p>");
